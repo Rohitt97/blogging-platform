@@ -1,9 +1,7 @@
-import React from "react";
 import {
   Box,
   AppBar,
   Toolbar,
-  IconButton,
   Typography,
   Button,
   Stack,
@@ -44,7 +42,14 @@ export default function Header() {
               <Button
                 onClick={handleSignout}
                 variant="outlined"
-                color="secondary"
+                sx={{
+                  color: "#D3D3D3",
+                  borderColor: "#D3D3D3",
+                  "&:hover": {
+                    backgroundColor: "rgba(211, 211, 211, 0.1)",
+                    borderColor: "#D3D3D3",
+                  },
+                }}
               >
                 Signout
               </Button>

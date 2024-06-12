@@ -1,6 +1,5 @@
 import { Box, Typography, Stack } from "@mui/material";
 import React from "react";
-import { getAllPosts } from "../../services/blogService";
 import { PostSummary } from "../../components/PostSummary";
 import { PostContext } from "../../components/PostProvider/PostContext";
 

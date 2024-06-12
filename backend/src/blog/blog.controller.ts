@@ -4,7 +4,6 @@ import {
   Get,
   Param,
   Post,
-  Query,
   Patch,
   Delete,
   UseGuards,
@@ -13,8 +12,6 @@ import {
 import { BlogService } from './blog.service';
 import { BlogPostDto } from './dto/blog-post-dto';
 import { UpdateBlogDto } from './dto/update-blog-dto';
-import { AuthGuard } from '@nestjs/passport';
-import { JwtStrategy } from 'src/auth/jwt.strategy';
 import { JwtAuthGuard } from 'src/@globals/guard/jwt-auth.guard';
 
 @Controller('blogs')

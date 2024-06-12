@@ -1,7 +1,6 @@
 import { Button, Card, CardContent, Stack, TextField } from "@mui/material";
-import { createBlog, editBlog, getBlog } from "../../services/blogService";
+import { getBlog } from "../../services/blogService";
 import { useNavigate, useParams } from "react-router-dom";
-import { useAuth } from "../../components/AuthProvider/AuthContext";
 import { useForm } from "react-hook-form";
 import React from "react";
 import { Post } from "../../types/post";
@@ -14,7 +13,6 @@ interface FormValues {
 
 export function EditBlogPage() {
   const navigate = useNavigate();
-  const { authUser } = useAuth();
   const [post, setPost] = React.useState<Post | null>(null);
   const { updatePost } = React.useContext(PostContext);
   const {

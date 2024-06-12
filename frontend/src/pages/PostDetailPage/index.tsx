@@ -15,7 +15,7 @@ export default function PostDetailPage() {
       setPost(response);
     }
     getBlogPost();
-  }, []);
+  }, [id]);
 
   if (!id) {
     return (

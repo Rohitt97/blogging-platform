@@ -15,16 +15,6 @@ type ProviderAction = {
 
 function postReducer(state: Post[], action: ProviderAction) {
   switch (action.type) {
-    case "CREATE_POST":
-      //call to api
-      //refresh the state
-      return state;
-
-    case "UPDATE_POST":
-      //update a post
-      //refresh the state
-      return state;
-
     case "REFRESH_LIST":
       return [...action.payload];
 

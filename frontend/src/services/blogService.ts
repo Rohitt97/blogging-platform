@@ -1,13 +1,8 @@
-//createBlog
-//deleteBlog()
-//editblog()
-
 import { axios } from "../config/axios";
 import { Post } from "../types/post";
 
 export async function createBlog(blogData: any) {
   const response = await axios.post("/blogs", blogData);
-  console.log(response.data);
   return response.data;
 }
 

@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, Stack, Typography, Avatar } from "@mui/material";
 import { Author } from "../../types/author";
 

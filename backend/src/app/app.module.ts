@@ -1,10 +1,8 @@
 import { Module } from '@nestjs/common';
-
 import { AuthModule } from '../auth/auth.module';
 import { BlogModule } from '../blog/blog.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule } from '@nestjs/config';
-import { JwtStrategy } from 'src/auth/jwt.strategy';
 
 @Module({
   imports: [

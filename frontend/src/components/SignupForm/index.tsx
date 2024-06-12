@@ -1,7 +1,13 @@
-import React from "react";
-import { Card, CardContent, Stack, TextField, Button } from "@mui/material";
+import {
+  Card,
+  CardContent,
+  Stack,
+  TextField,
+  Button,
+  Typography,
+} from "@mui/material";
 import { signupUser } from "../../services/authService";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../AuthProvider/AuthContext";
 import { useForm } from "react-hook-form";
 
@@ -12,11 +18,7 @@ interface FormValues {
 }
 
 export default function SignupForm() {
-  // const [name, setName] = React.useState<string | undefined>();
-  // const [email, setEmail] = React.useState<string | undefined>();
-  // const [password, setPassword] = React.useState<string | undefined>();
   const navigate = useNavigate();
-  // const { setAuthUser } = useAuth();
   const { setAuthUser } = useAuth();
   const {
     register,
@@ -67,10 +69,14 @@ export default function SignupForm() {
               color: "#fff",
             }}
           >
-            Signin
+            Signup
           </Button>
         </Stack>
       </CardContent>
+      <Typography variant="body1" sx={{ mb: 1, ml: 3 }}>
+        Already have an Account?
+        <Link to={"/auth/signin"}>Signin</Link>
+      </Typography>
     </Card>
   );
 }

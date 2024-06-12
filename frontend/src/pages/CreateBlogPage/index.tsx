@@ -1,7 +1,5 @@
 import { Button, Card, CardContent, Stack, TextField } from "@mui/material";
-import { createBlog } from "../../services/blogService";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../../components/AuthProvider/AuthContext";
 import { useForm } from "react-hook-form";
 import { PostContext } from "../../components/PostProvider/PostContext";
 import React from "react";
@@ -14,7 +12,6 @@ interface FormValues {
 export function CreateBlogPage() {
   const navigate = useNavigate();
   const { createPost } = React.useContext(PostContext);
-  const { authUser } = useAuth();
   const {
     register,
     handleSubmit,
@@ -23,7 +20,6 @@ export function CreateBlogPage() {
 
   const handleCreateBlog = async (data: FormValues) => {
     try {
-      const authID = authUser?._id;
       createPost(data.title, data.content);
       navigate("/");
     } catch (error) {
@@ -60,7 +56,7 @@ export function CreateBlogPage() {
             }}
             onClick={handleSubmit(handleCreateBlog)}
           >
-            Add Blog
+            Add Post
           </Button>
         </Stack>
       </CardContent>
